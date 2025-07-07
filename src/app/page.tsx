@@ -16,6 +16,7 @@ import {
   Trophy,
   CalendarDays,
   Sparkles,
+  PenSquare,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -82,8 +83,8 @@ const slides: SlideContent[] = [
         content: ReconhecimentoSlide,
       },
       {
-        title: "Próximos Passos",
-        Icon: MessageSquareQuote,
+        title: "Feedback e Encerramento",
+        Icon: PenSquare,
         content: ProximosPassosSlide,
       },
 ];

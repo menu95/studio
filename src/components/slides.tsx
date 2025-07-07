@@ -3,31 +3,30 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Logo from "@/components/logo";
 import PriceChart from "@/components/price-chart";
-import PresentationSummary from "@/components/presentation-summary";
 import FeedbackForm from "@/components/feedback-form";
 
 export const WelcomeSlide = () => (
-  <div className="text-center">
-    <div className="flex justify-center mb-8">
-      <Logo className="w-48 h-48 text-primary" />
+    <div className="text-center">
+      <div className="flex justify-center mb-8">
+        <Logo className="w-48 h-48" />
+      </div>
+      <h1 className="text-5xl font-headline text-primary mb-2">
+        Deep Insights
+      </h1>
+      <p className="text-2xl font-headline text-secondary-foreground">
+        Pauta reunião de equipe
+      </p>
+      <p className="text-lg text-muted-foreground mt-4">
+        08 de Julho de 2025
+      </p>
     </div>
-    <h1 className="text-5xl font-headline text-primary mb-2">
-      Deep Insights
-    </h1>
-    <p className="text-2xl font-headline text-secondary-foreground">
-      Pauta reunião de equipe
-    </p>
-    <p className="text-lg text-muted-foreground mt-4">
-      08 de Julho de 2025
-    </p>
-  </div>
-);
+  );
 
 export const ProcessosSlide = () => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start text-left max-w-6xl">
         <div>
             <p className="mb-4">Na primeira reunião, explicamos que contratamos um "acelerador de empresas" e que algumas coisas mudariam temporariamente para construirmos nossa marca e confiança.</p>
-            <h3 className="text-xl font-headline mb-4 text-primary">O que fizemos:</h3>
+            <h3 className="text-xl font-headline mt-4 mb-2 text-primary">O que fizemos:</h3>
             <ul className="space-y-2 list-disc list-inside">
                 <li>Ajuste no valor da sessão de R$80 para R$60 para facilitar a captação (sem impacto no repasse).</li>
                 <li>Adoção de sessões avulsas para facilitar a adesão inicial.</li>
@@ -36,7 +35,7 @@ export const ProcessosSlide = () => (
             </ul>
         </div>
         <div>
-            <h3 className="text-xl font-headline mt-6 lg:mt-0 mb-4 text-primary">Situação Atual:</h3>
+            <h3 className="text-xl font-headline mt-6 lg:mt-0 mb-2 text-primary">Situação Atual:</h3>
             <ul className="space-y-2 list-disc list-inside">
                 <li>Mantemos sessões avulsas, mas estimulamos pacotes mensais (com vantagens como 5ª sessão grátis).</li>
                 <li>Reajuste gradual dos valores (agora entre R$79,99 - R$129,90).</li>
@@ -148,7 +147,7 @@ export const RedesSociaisSlide = () => (
 export const CatalogoSlide = () => (
     <div className="max-w-4xl mx-auto text-left">
         <p className="text-lg text-center mb-6">
-            Desenvolvemos um catálogo com inteligência artificial para facilitar a conexão entre pacientes e psicólogas.
+            Desenvolvemos um catálogo para facilitar a conexão entre pacientes e psicólogas.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="bg-background/50">
@@ -188,19 +187,13 @@ export const ReconhecimentoSlide = () => (
 
 export const ProximosPassosSlide = () => (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-6xl">
-    <div>
-      <h3 className="text-2xl font-headline text-primary mb-4">Resumo e Feedback</h3>
-      <p className="mb-4">Para concluir, vamos gerar um resumo dos pontos-chave da nossa conversa e abrir um espaço para seus valiosos feedbacks.</p>
-      <PresentationSummary textToSummarize={`- Processos: Revisão das mudanças temporárias (preço, sessões avulsas) e da situação atual (reajuste, pacotes, nichos).
-- Comunicação: Importância da agilidade no contato com pacientes (até 24h) e nas respostas internas.
-- Organização da Agenda: Essencial manter a agenda do Google atualizada para a gestão financeira (cobranças e repasses).
-- Persona: Ajustes na comunicação e marketing. Pedido de paciência na fase de atração do público-alvo ideal.
-- Redes Sociais: Participação voluntária, mas relevante para construir confiança. Formas de colaborar foram apresentadas.
-- Catálogo de Psis: Apresentação da ferramenta com IA que facilita a conexão paciente-psicóloga.
-- Reconhecimento: Todas as psicólogas da equipe foram elogiadas, sem exceção, pelo seu empenho.`} />
+        <div>
+            <h3 className="text-2xl font-headline text-primary mb-4">Feedback</h3>
+            <p className="mb-4">Para concluir, gostaríamos de abrir um espaço para seus valiosos feedbacks. Compartilhe suas ideias, sugestões e percepções sobre os temas que conversamos.</p>
+            <p className="text-sm text-muted-foreground">Sua opinião é fundamental para construirmos a Deep juntas.</p>
+        </div>
+        <div>
+            <FeedbackForm />
+        </div>
     </div>
-    <div>
-      <FeedbackForm />
-    </div>
-  </div>
 );

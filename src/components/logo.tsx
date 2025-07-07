@@ -9,18 +9,34 @@ const Logo = ({ className }: { className?: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
+      {/* Right side - Flower */}
+      <g className="fill-accent">
+        <path
+            d="M50 50C75 25 90 40 90 50C90 60 75 75 50 50Z"
+        />
+        <path
+            d="M50 50C70 20 95 35 95 50C95 65 70 80 50 50Z"
+            transform="rotate(30 50 50)"
+        />
+        <path
+            d="M50 50C70 20 95 35 95 50C95 65 70 80 50 50Z"
+            transform="rotate(-30 50 50)"
+        />
+      </g>
+      
+      {/* Left Side - Brain */}
       <path
-        d="M50,10 C77.61,10 100,32.39 100,60 C100,87.61 77.61,110 50,110 C22.39,110 0,87.61 0,60 C0,32.39 22.39,10 50,10 Z"
-        className="fill-current text-primary/20"
+        d="M50 95C25.1472 95 5 74.8528 5 50C5 25.1472 25.1472 5 50 5V95Z"
+        className="fill-primary"
       />
-      <path
-        d="M30,90 C40,95 60,95 70,90 L70,30 C60,25 40,25 30,30 Z"
-        className="fill-current text-primary"
-      />
-       <path
-        d="M70,50 C85,45 95,55 90,70 C85,85 70,85 70,70"
-        className="fill-current text-accent"
-      />
+      <g className="stroke-primary-foreground/90" strokeWidth="4" strokeLinecap="round">
+        <path
+          d="M25 75C35 80 45 70 40 60C35 50 25 55 20 45"
+        />
+        <path
+          d="M30 40C35 35 45 40 45 30"
+        />
+      </g>
     </svg>
   );
 };
