@@ -34,14 +34,14 @@ export default function FeedbackForm() {
 
             if (result.success) {
                 toast({
-                    title: "Feedback Enviado!",
-                    description: "Obrigado por sua contribuição.",
+                    title: "Sucesso!",
+                    description: result.message,
                 })
                 form.reset();
             } else {
                  toast({
-                    title: "Erro ao enviar feedback",
-                    description: "Por favor, tente novamente mais tarde.",
+                    title: "Erro ao Enviar",
+                    description: result.message || "Por favor, tente novamente mais tarde.",
                     variant: "destructive",
                 })
             }
