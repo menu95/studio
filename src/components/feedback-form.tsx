@@ -26,7 +26,7 @@ export default function FeedbackForm() {
         },
     })
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
+    const onSubmit = (values: z.infer<typeof formSchema>) => {
         console.log("Feedback recebido:", values.feedback)
         toast({
             title: "Feedback Enviado!",
@@ -34,7 +34,7 @@ export default function FeedbackForm() {
         })
         setIsSubmitted(true)
         form.reset();
-    };
+    }
 
 
   return (

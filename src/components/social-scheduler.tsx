@@ -43,7 +43,7 @@ export default function SocialScheduler() {
     },
   })
 
-  async function onSubmit(values: z.infer<typeof formSchema>) {
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsLoading(true)
     setError(null)
     setResult(null)
@@ -64,7 +64,7 @@ export default function SocialScheduler() {
     } finally {
       setIsLoading(false)
     }
-  };
+  }
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-4xl mx-auto">
