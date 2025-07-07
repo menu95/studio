@@ -14,6 +14,8 @@ import {
   HeartHandshake,
   Target,
   Trophy,
+  CalendarDays,
+  Sparkles,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -56,7 +58,7 @@ const slides: SlideContent[] = [
       },
       {
         title: "Tópico 3: Organização da Agenda",
-        Icon: Sprout,
+        Icon: CalendarDays,
         content: AgendaSlide,
       },
       {
@@ -71,11 +73,11 @@ const slides: SlideContent[] = [
       },
       {
         title: "Tópico 6: Catálogo de Psis Inteligente",
-        Icon: Users,
+        Icon: Sparkles,
         content: CatalogoSlide,
       },
       {
-        title: "Reconhecimento",
+        title: "Tópico 7: Reconhecimento",
         Icon: Trophy,
         content: ReconhecimentoSlide,
       },
