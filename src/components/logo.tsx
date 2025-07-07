@@ -6,7 +6,7 @@ const Logo = ({ className }: { className?: string }) => {
   return (
     <div className={cn('relative', className)}>
       <Image
-        src="/logo.png"
+        src="/logo.webp"
         alt="Deep Insights Logo"
         fill
         className="object-contain"
