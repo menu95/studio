@@ -254,7 +254,7 @@ export const RedesSociaisSlide = () => (
                 </Card>
             </div>
             <div className="relative rounded-lg overflow-hidden h-full min-h-[200px] lg:min-h-full">
-                 <Image src="/social-media-phone.webp" alt="Exemplo de post em rede social" fill className="object-cover opacity-80" />
+                 <Image src="/social-media-phone.png" alt="Exemplo de post em rede social" fill className="object-cover opacity-80" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end">
                     <p className="text-white font-bold text-lg">Conectando através de histórias</p>
                     <p className="text-white/80 text-sm">Sua presença humaniza nossa marca.</p>
