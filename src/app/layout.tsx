@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster"
 export const metadata: Metadata = {
   title: 'Deep Insights Deck',
   description: 'Uma apresentação interativa para a equipe Deep.',
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
