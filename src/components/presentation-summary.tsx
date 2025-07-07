@@ -28,7 +28,7 @@ export default function PresentationSummary({ textToSummarize }: PresentationSum
     } finally {
       setIsLoading(false)
     }
-  }
+  };
 
   return (
     <Card className="h-full bg-background/50">

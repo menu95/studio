@@ -34,7 +34,7 @@ export default function FeedbackForm() {
         })
         setIsSubmitted(true)
         form.reset();
-    }
+    };
 
 
   return (
