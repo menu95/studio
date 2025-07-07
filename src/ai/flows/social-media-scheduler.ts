@@ -69,7 +69,7 @@ Consider the following:
 Based on this information, provide a suggested posting schedule, including specific dates and times, and a rationale for why this schedule is optimal. Return the schedule as a JSON array of objects with "date" and "time" properties. The date should be YYYY-MM-DD format and the time should be HH:MM 24h format. Ensure that the returned array is a valid JSON.
 
 Example of the schedule array:
-```json
+\`\`\`json
 [
   {
     "date": "2024-01-01",
@@ -80,7 +80,7 @@ Example of the schedule array:
     "time": "15:00"
   }
 ]
-```
+\`\`\`
 
 Here is the information:
 Platform: {{platform}}
