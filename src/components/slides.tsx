@@ -288,7 +288,7 @@ export const CatalogoSlide = () => (
                 </CardContent>
                 <CardFooter>
                      <div className="w-full h-32 relative rounded-lg overflow-hidden">
-                        <Image src="/online-quiz.webp" alt="Exemplo de teste online" fill className="object-cover" />
+                        <Image src="/online-quiz.png" alt="Exemplo de teste online" fill className="object-cover" />
                      </div>
                 </CardFooter>
             </Card>
@@ -303,7 +303,7 @@ export const CatalogoSlide = () => (
                 </CardContent>
                  <CardFooter>
                      <div className="w-full h-32 relative rounded-lg overflow-hidden">
-                        <Image src="/profile-grid.webp" alt="Catálogo de psicólogas" fill className="object-cover" />
+                        <Image src="/profile-grid.png" alt="Catálogo de psicólogas" fill className="object-cover" />
                      </div>
                 </CardFooter>
             </Card>
