@@ -30,7 +30,7 @@ import {
     AgendaSlide,
     PersonaSlide,
     RedesSociaisSlide,
-    CatalogoSlide,
+    AppDasPsisSlide,
     ReconhecimentoSlide,
     ProximosPassosSlide
 } from '@/components/slides';
@@ -73,9 +73,9 @@ const slides: SlideContent[] = [
         content: RedesSociaisSlide,
       },
       {
-        title: "Tópico 6: Catálogo de Psis Inteligente",
+        title: "Tópico 6: App das Psis Inteligente",
         Icon: Sparkles,
-        content: CatalogoSlide,
+        content: AppDasPsisSlide,
       },
       {
         title: "Tópico 7: Reconhecimento",

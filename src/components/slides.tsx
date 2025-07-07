@@ -271,10 +271,10 @@ export const RedesSociaisSlide = () => (
     </div>
 );
 
-export const CatalogoSlide = () => (
+export const AppDasPsisSlide = () => (
     <div className="max-w-5xl mx-auto text-left w-full">
         <p className="text-lg text-center mb-6 text-muted-foreground">
-            Desenvolvemos um catálogo exclusivo para facilitar a conexão entre pacientes e psicólogas, onde os pacientes podem:
+            Desenvolvemos um app das psis exclusivo para facilitar a conexão entre pacientes e psicólogas, onde os pacientes podem:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <Card className="bg-background/30 flex flex-col">
@@ -303,7 +303,7 @@ export const CatalogoSlide = () => (
                 </CardContent>
                  <CardFooter>
                      <div className="w-full h-32 relative rounded-lg overflow-hidden">
-                        <Image src="/profile-grid.png" alt="Catálogo de psicólogas" fill className="object-cover" />
+                        <Image src="/profile-grid.png" alt="App das psis de psicólogas" fill className="object-cover" />
                      </div>
                 </CardFooter>
             </Card>
