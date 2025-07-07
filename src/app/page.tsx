@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
@@ -30,12 +30,8 @@ type SlideContent = {
   content: React.ReactNode;
 };
 
-export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides: SlideContent[] = useMemo(
-    () => [
-      {
+const slides: SlideContent[] = [
+    {
         title: "Boas-vindas",
         Icon: Wind,
         content: (
@@ -233,9 +229,10 @@ export default function Home() {
           </div>
         ),
       },
-    ],
-    []
-  );
+];
+
+export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
