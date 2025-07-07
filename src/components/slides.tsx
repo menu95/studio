@@ -254,7 +254,7 @@ export const RedesSociaisSlide = () => (
                 </Card>
             </div>
             <div className="relative rounded-lg overflow-hidden h-full min-h-[200px] lg:min-h-full">
-                 <Image src="https://placehold.co/400x600.png" alt="Exemplo de post em rede social" fill objectFit="cover" className="opacity-80" data-ai-hint="social media phone"/>
+                 <Image src="/social-media-phone.webp" alt="Exemplo de post em rede social" fill className="object-cover opacity-80" />
                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent p-4 flex flex-col justify-end">
                     <p className="text-white font-bold text-lg">Conectando através de histórias</p>
                     <p className="text-white/80 text-sm">Sua presença humaniza nossa marca.</p>
@@ -288,7 +288,7 @@ export const CatalogoSlide = () => (
                 </CardContent>
                 <CardFooter>
                      <div className="w-full h-32 relative rounded-lg overflow-hidden">
-                        <Image src="https://placehold.co/600x300.png" alt="Exemplo de teste online" fill objectFit="cover" data-ai-hint="online quiz form"/>
+                        <Image src="/online-quiz.webp" alt="Exemplo de teste online" fill className="object-cover" />
                      </div>
                 </CardFooter>
             </Card>
@@ -303,7 +303,7 @@ export const CatalogoSlide = () => (
                 </CardContent>
                  <CardFooter>
                      <div className="w-full h-32 relative rounded-lg overflow-hidden">
-                        <Image src="https://placehold.co/600x300.png" alt="Catálogo de psicólogas" fill objectFit="cover" data-ai-hint="professional profile grid"/>
+                        <Image src="/profile-grid.webp" alt="Catálogo de psicólogas" fill className="object-cover" />
                      </div>
                 </CardFooter>
             </Card>
