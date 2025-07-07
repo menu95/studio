@@ -2,27 +2,33 @@
 
 import { Resend } from 'resend';
 
-// A instância do Resend é criada com a chave da API das variáveis de ambiente.
-// Certifique-se de que a variável RESEND_API_KEY está definida no seu arquivo .env.
+// The Resend instance is created with the API key from environment variables.
 const resend = new Resend(process.env.RESEND_API_KEY);
-const toEmail = 'gabrielfurtunatofranca@gmail.com';
-// Este deve ser um e-mail de um domínio que você verificou com o Resend.
-// Para fins de teste, o Resend permite usar 'onboarding@resend.dev'.
+
+// The recipient email is also loaded from environment variables for easy configuration.
+const toEmail = process.env.TO_EMAIL;
+
+// This must be a domain you have verified with Resend.
+// For testing purposes, Resend allows using 'onboarding@resend.dev'.
 const fromEmail = 'onboarding@resend.dev'; 
 
 /**
- * Server Action para receber o feedback do formulário e enviá-lo por e-mail.
+ * Server Action to receive feedback from the form and send it via email.
  *
- * @param feedback O texto do feedback enviado pelo usuário.
+ * @param feedback The feedback text submitted by the user.
  */
 export async function submitFeedback(feedback: string): Promise<{ success: boolean; message: string }> {
-  // Validação simples para garantir que a chave da API e o feedback existem.
+  // Simple validation to ensure API key, recipient email, and feedback exist.
   if (!process.env.RESEND_API_KEY || process.env.RESEND_API_KEY === 'YOUR_RESEND_API_KEY') {
-    console.error("RESEND_API_KEY não está configurada.");
-    return { success: false, message: "Erro de configuração no servidor. A chave da API de e-mail não foi encontrada." };
+    console.error("RESEND_API_KEY is not configured.");
+    return { success: false, message: "Server configuration error. Email API key not found." };
+  }
+  if (!toEmail) {
+    console.error("TO_EMAIL is not configured in .env file.");
+    return { success: false, message: "Server configuration error. Recipient email not found." };
   }
   if (!feedback) {
-    return { success: false, message: "O feedback não pode estar vazio." };
+    return { success: false, message: "Feedback cannot be empty." };
   }
 
   try {
@@ -34,14 +40,14 @@ export async function submitFeedback(feedback: string): Promise<{ success: boole
     });
 
     if (error) {
-      console.error("Erro ao enviar e-mail:", error);
-      return { success: false, message: "Falha ao enviar o e-mail." };
+      console.error("Error sending email:", error);
+      return { success: false, message: "Failed to send the email." };
     }
 
-    console.log("E-mail enviado com sucesso:", data);
-    return { success: true, message: "Seu feedback foi enviado com sucesso!" };
+    console.log("Email sent successfully:", data);
+    return { success: true, message: "Your feedback has been sent successfully!" };
   } catch (exception) {
-    console.error("Exceção ao enviar e-mail:", exception);
-    return { success: false, message: "Ocorreu um erro inesperado." };
+    console.error("Exception sending email:", exception);
+    return { success: false, message: "An unexpected error occurred." };
   }
 }
