@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useMemo, useRef } from "react";
+import React, { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
@@ -219,7 +219,13 @@ export default function Home() {
             <div>
               <h3 className="text-2xl font-headline text-primary mb-4">Resumo e Feedback</h3>
               <p className="mb-4">Para concluir, vamos gerar um resumo dos pontos-chave da nossa conversa e abrir um espaço para seus valiosos feedbacks.</p>
-              <PresentationSummary textToSummarize={slides.map(s => `${s.title}: ${JSON.stringify(s.content)}`).join('\n')} />
+              <PresentationSummary textToSummarize={`- Processos: Ajuste de valor da sessão para R$60, adoção de sessões avulsas, e marketing para ansiedade e estresse. Migração para pacotes mensais, reajuste gradual de valores, manutenção de 50% de repasse e ampliação de nichos.
+- Agilidade na Comunicação: Importância do contato rápido com pacientes e respostas ágeis internamente.
+- Organização da Agenda: Necessidade de manter a agenda do Google atualizada para controle financeiro.
+- Ajustes na Persona: Adaptação das estratégias de marketing e paciência com o perfil dos pacientes iniciais.
+- Redes Sociais: A participação é opcional mas relevante.
+- Catálogo de Psis Inteligente: Ferramenta de IA para ajudar pacientes a encontrar a psicóloga ideal.
+- Reconhecimento: Elogios a todas as psicólogas da equipe.`} />
             </div>
             <div>
               <FeedbackForm />
