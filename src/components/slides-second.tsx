@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react'; 
-import { motion } from 'framer-motion';
+import { motion } from 'framer-motion'; 
 import {
     HandCoins, CalendarDays, Target, Activity, HeartHandshake,
     Megaphone, LayoutDashboard, FileText, RefreshCw, Star,
