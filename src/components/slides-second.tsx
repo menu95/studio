@@ -126,7 +126,7 @@ export const Expectativas2026Slide = () => (
                 </div>
                 <div className="space-y-4">
                      <div className="p-4 bg-accent/5 rounded-lg border border-accent/10">
-                        <p className="text-sm font-semibold italic">&quot;Nossa visão para 2026 é consolidar a Deep Insights como referência em agilidade e qualidade no atendimento psicológico online.&quot;</p>
+                        <p className="text-sm font-semibold italic">&quot;Nossa visão para 2026 é consolidar a Deep Saúde como referência em agilidade e qualidade no atendimento psicológico online.&quot;</p>
                      </div>
                 </div>
             </CardContent>
@@ -149,7 +149,7 @@ export const Movimentos2025Slide = () => (
                     <div className="relative">
                         <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
                         <h4 className="font-bold">Início da Operação</h4>
-                        <p className="text-sm text-muted-foreground">Lançamento da plataforma e primeiros atendimentos.</p>
+                        <p className="text-sm text-muted-foreground">Início das estratégias de ads e primeiros atendimentos.</p>
                     </div>
                     <div className="relative">
                         <div className="absolute -left-[41px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-background" />
