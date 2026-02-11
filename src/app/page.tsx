@@ -174,7 +174,7 @@ export default function Home() {
                             <Rocket className="w-8 h-8 text-accent" />
                         </div>
                         <CardTitle className="text-3xl font-headline text-primary">Segundo All Hands</CardTitle>
-                        <CardDescription className="text-lg">Amanhã, 11 de Fevereiro</CardDescription>
+                        <CardDescription className="text-lg">11 de Fevereiro de 2026</CardDescription>
                     </CardHeader>
                 </Card>
             </div>
