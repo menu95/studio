@@ -8,20 +8,26 @@ import {
   ArrowRight,
   Wind,
   BarChart,
-  MessageSquareQuote,
   Users,
-  Sprout,
-  HeartHandshake,
+  CalendarDays,
   Target,
   Trophy,
-  CalendarDays,
   Sparkles,
   PenSquare,
+  HeartHandshake,
+  Home as HomeIcon,
+  HandCoins,
+  Activity,
+  Megaphone,
+  LayoutDashboard,
+  FileText,
+  RefreshCw,
+  Rocket
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Logo from "@/components/logo";
 import {
     WelcomeSlide,
@@ -35,62 +41,55 @@ import {
     ProximosPassosSlide
 } from '@/components/slides';
 
+import {
+    WelcomeSlideSecond,
+    AjusteValorSlide,
+    AgendaOrganizadaSlide,
+    Expectativas2026Slide,
+    Movimentos2025Slide,
+    SucessoClienteSlide,
+    MarketingSlide,
+    SetoresEstrelaGuiaSlide,
+    ContratosSlide,
+    ReunioesRecorrentesSlide
+} from '@/components/slides-second';
+
 type SlideContent = {
   title: string;
   Icon: React.ElementType;
   content: React.ElementType;
 };
 
-const slides: SlideContent[] = [
-    {
-        title: "Boas-vindas",
-        Icon: Wind,
-        content: WelcomeSlide,
-      },
-      {
-        title: "Tópico 1: Processos",
-        Icon: BarChart,
-        content: ProcessosSlide,
-      },
-      {
-        title: "Tópico 2: Agilidade na Comunicação",
-        Icon: HeartHandshake,
-        content: ComunicacaoSlide,
-      },
-      {
-        title: "Tópico 3: Organização da Agenda",
-        Icon: CalendarDays,
-        content: AgendaSlide,
-      },
-      {
-        title: "Tópico 4: Ajustes na Persona",
-        Icon: Target,
-        content: PersonaSlide,
-      },
-      {
-        title: "Tópico 5: Redes Sociais",
-        Icon: Users,
-        content: RedesSociaisSlide,
-      },
-      {
-        title: "Tópico 6: App das Psis Inteligente",
-        Icon: Sparkles,
-        content: AppDasPsisSlide,
-      },
-      {
-        title: "Tópico 7: Reconhecimento",
-        Icon: Trophy,
-        content: ReconhecimentoSlide,
-      },
-      {
-        title: "Feedback e Encerramento",
-        Icon: PenSquare,
-        content: ProximosPassosSlide,
-      },
+const presentation1Slides: SlideContent[] = [
+    { title: "Boas-vindas", Icon: Wind, content: WelcomeSlide },
+    { title: "Tópico 1: Processos", Icon: BarChart, content: ProcessosSlide },
+    { title: "Tópico 2: Agilidade na Comunicação", Icon: HeartHandshake, content: ComunicacaoSlide },
+    { title: "Tópico 3: Organização da Agenda", Icon: CalendarDays, content: AgendaSlide },
+    { title: "Tópico 4: Ajustes na Persona", Icon: Target, content: PersonaSlide },
+    { title: "Tópico 5: Redes Sociais", Icon: Users, content: RedesSociaisSlide },
+    { title: "Tópico 6: App das Psis Inteligente", Icon: Sparkles, content: AppDasPsisSlide },
+    { title: "Tópico 7: Reconhecimento", Icon: Trophy, content: ReconhecimentoSlide },
+    { title: "Feedback e Encerramento", Icon: PenSquare, content: ProximosPassosSlide },
+];
+
+const presentation2Slides: SlideContent[] = [
+    { title: "Boas-vindas", Icon: Wind, content: WelcomeSlideSecond },
+    { title: "Ajuste de Valor", Icon: HandCoins, content: AjusteValorSlide },
+    { title: "Agenda Organizada", Icon: CalendarDays, content: AgendaOrganizadaSlide },
+    { title: "Expectativas 2026", Icon: Rocket, content: Expectativas2026Slide },
+    { title: "Movimentos 2025", Icon: Activity, content: Movimentos2025Slide },
+    { title: "Sucesso do Cliente", Icon: HeartHandshake, content: SucessoClienteSlide },
+    { title: "Marketing", Icon: Megaphone, content: MarketingSlide },
+    { title: "Setores & Notion", Icon: LayoutDashboard, content: SetoresEstrelaGuiaSlide },
+    { title: "Contratos", Icon: FileText, content: ContratosSlide },
+    { title: "Reuniões Recorrentes", Icon: RefreshCw, content: ReunioesRecorrentesSlide },
 ];
 
 export default function Home() {
+  const [selectedPresentation, setSelectedPresentation] = useState<1 | 2 | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = selectedPresentation === 1 ? presentation1Slides : presentation2Slides;
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
@@ -106,19 +105,68 @@ export default function Home() {
     exit: { opacity: 0, x: -50 },
   };
 
+  if (selectedPresentation === null) {
+    return (
+      <main className="h-screen w-screen bg-background text-foreground flex flex-col items-center justify-center p-4 sm:p-8 font-body relative overflow-hidden">
+        <div className="absolute top-6 left-6">
+          <Logo className="w-20 h-20 text-primary opacity-50" />
+        </div>
+
+        <div className="max-w-4xl w-full text-center space-y-12">
+            <div className="space-y-4">
+                <h1 className="text-6xl font-headline text-primary">All Hands</h1>
+                <p className="text-xl text-muted-foreground font-headline">Escolha a apresentação que deseja visualizar</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <Card
+                    className="cursor-pointer hover:border-primary/50 transition-all hover:shadow-xl group bg-background/50"
+                    onClick={() => { setSelectedPresentation(1); setCurrentSlide(0); }}
+                >
+                    <CardHeader className="text-center py-12">
+                        <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Users className="w-8 h-8 text-primary" />
+                        </div>
+                        <CardTitle className="text-3xl font-headline text-primary">Primeiro All Hands</CardTitle>
+                        <CardDescription className="text-lg">08 de Julho de 2025</CardDescription>
+                    </CardHeader>
+                </Card>
+
+                <Card
+                    className="cursor-pointer hover:border-accent/50 transition-all hover:shadow-xl group bg-background/50"
+                    onClick={() => { setSelectedPresentation(2); setCurrentSlide(0); }}
+                >
+                    <CardHeader className="text-center py-12">
+                        <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <Rocket className="w-8 h-8 text-accent" />
+                        </div>
+                        <CardTitle className="text-3xl font-headline text-primary">Segundo All Hands</CardTitle>
+                        <CardDescription className="text-lg">Alinhamento e Estratégia</CardDescription>
+                    </CardHeader>
+                </Card>
+            </div>
+        </div>
+      </main>
+    );
+  }
+
   const CurrentSlideContent = slides[currentSlide].content;
   const CurrentSlideIcon = slides[currentSlide].Icon;
 
   return (
     <main className="h-screen w-screen bg-background text-foreground flex flex-col items-center justify-center p-4 sm:p-8 font-body relative overflow-hidden">
-      <div className="absolute top-6 left-6">
+      <div className="absolute top-6 left-6 flex items-center gap-4">
         <Logo className="w-20 h-20 text-primary opacity-50" />
+        <Button variant="ghost" size="sm" onClick={() => setSelectedPresentation(null)} className="flex items-center gap-2">
+            <HomeIcon className="w-4 h-4" />
+            Menu Principal
+        </Button>
       </div>
 
       <div className="flex-grow flex flex-col items-center justify-center w-full max-w-7xl">
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentSlide}
+            key={`${selectedPresentation}-${currentSlide}`}
             initial="hidden"
             animate="visible"
             exit="exit"
