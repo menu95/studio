@@ -74,14 +74,14 @@ const presentation1Slides: SlideContent[] = [
 
 const presentation2Slides: SlideContent[] = [
     { title: "Boas-vindas", Icon: Wind, content: WelcomeSlideSecond },
-    { title: "Ajuste de Valor", Icon: HandCoins, content: AjusteValorSlide },
-    { title: "Agenda Organizada", Icon: CalendarDays, content: AgendaOrganizadaSlide },
     { title: "Expectativas 2026", Icon: Rocket, content: Expectativas2026Slide },
-    { title: "Movimentos 2025", Icon: Activity, content: Movimentos2025Slide },
+    { title: "Contratos", Icon: FileText, content: ContratosSlide },
+    { title: "Agenda Organizada", Icon: CalendarDays, content: AgendaOrganizadaSlide },
     { title: "Sucesso do Cliente", Icon: HeartHandshake, content: SucessoClienteSlide },
     { title: "Marketing", Icon: Megaphone, content: MarketingSlide },
+    { title: "Ajuste de Valor", Icon: HandCoins, content: AjusteValorSlide },
+    { title: "Movimentos 2025", Icon: Activity, content: Movimentos2025Slide },
     { title: "Setores & Notion", Icon: LayoutDashboard, content: SetoresEstrelaGuiaSlide },
-    { title: "Contratos", Icon: FileText, content: ContratosSlide },
     { title: "Reuniões Recorrentes", Icon: RefreshCw, content: ReunioesRecorrentesSlide },
 ];
 
