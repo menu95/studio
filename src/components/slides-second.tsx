@@ -1,4 +1,3 @@
-
 "use client";
 
 import React from 'react';
@@ -21,10 +20,10 @@ export const WelcomeSlideSecond = () => (
         Segundo All Hands
       </h1>
       <p className="text-2xl font-headline text-secondary-foreground">
-        Alinhamento e Estratégia
+        Contexto Geral
       </p>
-      <p className="text-lg text-muted-foreground mt-4">
-        Deep Insights
+      <p className="text-lg text-muted-foreground mt-4 max-w-2xl mx-auto">
+        Desde o início, a clínica cresceu muito. Esse crescimento exige mais organização, clareza de processos e alinhamento entre todos. Hoje vamos mostrar como estamos estruturando o que será essencial para 2026.
       </p>
     </div>
 );
@@ -76,29 +75,21 @@ export const AgendaOrganizadaSlide = () => (
                 <CardDescription>Apresentado por Kamila</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-                <p className="text-lg">A organização da agenda é o coração da nossa operação.</p>
+                <p className="text-lg">A agenda é nosso principal instrumento: disponibilidade, direcionamento, cobranças e liberação de atendimento.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="p-4 bg-muted/50 rounded-lg">
                         <h4 className="font-bold flex items-center gap-2 mb-2">
                             <CheckCircle className="text-primary w-5 h-5" />
-                            Benefícios
+                            Importância
                         </h4>
-                        <ul className="text-sm space-y-2">
-                            <li>Previsibilidade financeira</li>
-                            <li>Melhor experiência do paciente</li>
-                            <li>Evita conflitos de horários</li>
-                        </ul>
+                        <p className="text-sm">Mantê-la atualizada é fundamental para evitar impactos no paciente e no financeiro.</p>
                     </div>
                     <div className="p-4 bg-muted/50 rounded-lg">
                         <h4 className="font-bold flex items-center gap-2 mb-2">
                             <AlertCircle className="text-accent w-5 h-5" />
-                            O que precisamos
+                            Compromisso 2026
                         </h4>
-                        <ul className="text-sm space-y-2">
-                            <li>Atualização em tempo real</li>
-                            <li>Sinalização de faltas/remarcações</li>
-                            <li>Bloqueio de horários indisponíveis</li>
-                        </ul>
+                         <p className="text-sm">Precisamos de cuidado e atenção constante com a agenda para o bom funcionamento da clínica.</p>
                     </div>
                 </div>
             </CardContent>
@@ -182,26 +173,15 @@ export const SucessoClienteSlide = () => (
             <CardHeader>
                 <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
                     <HeartHandshake className="w-8 h-8" />
-                    Sucesso do Cliente (Customer Success)
+                    Sucesso do Cliente
                 </CardTitle>
                 <CardDescription>Apresentado por Kamila</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-                <p className="text-lg font-semibold text-accent">O que é sucesso do cliente para a Deep?</p>
-                <p>Não é apenas o paciente fazer a sessão, mas sim ele <b>alcançar os resultados</b> que busca, sentindo-se acolhido e transformado pelo processo.</p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-                    <div className="text-center p-4">
-                        <div className="text-3xl font-bold text-primary mb-1">Retenção</div>
-                        <p className="text-xs text-muted-foreground">Continuidade no tratamento</p>
-                    </div>
-                    <div className="text-center p-4">
-                        <div className="text-3xl font-bold text-primary mb-1">Indicação</div>
-                        <p className="text-xs text-muted-foreground">Pacientes felizes indicam</p>
-                    </div>
-                    <div className="text-center p-4">
-                        <div className="text-3xl font-bold text-primary mb-1">Satisfação</div>
-                        <p className="text-xs text-muted-foreground">Feedback positivo constante</p>
-                    </div>
+                <p className="text-lg font-semibold text-accent">Estratégico e Humano</p>
+                <p>Sucesso do cliente é o paciente se sentir acolhido, cuidado e lembrado. Não é apenas fazer a sessão.</p>
+                <div className="bg-primary/5 p-4 rounded-lg border border-primary/10">
+                     <p className="text-sm"><b>Bruna</b> assumiu esse papel, enviando mensagens periódicas e pedindo feedbacks, mostrando que a Deep Saúde se importa com quem está do outro lado.</p>
                 </div>
             </CardContent>
         </Card>
@@ -214,23 +194,19 @@ export const MarketingSlide = () => (
             <CardHeader>
                 <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
                     <Megaphone className="w-8 h-8" />
-                    Marketing
+                    Marketing e Presença
                 </CardTitle>
                 <CardDescription>Apresentado por Kamila</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="space-y-3">
-                        <h4 className="font-bold text-secondary-foreground">Foco atual:</h4>
-                        <ul className="space-y-2 text-sm">
-                            <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Campanhas direcionadas</li>
-                            <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Otimização de conversão</li>
-                            <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-primary" /> Novos nichos</li>
-                        </ul>
+                        <h4 className="font-bold text-secondary-foreground">Marketing Humano</h4>
+                        <p className="text-sm text-muted-foreground">As pessoas querem saber quem são as psicólogas e quem está por trás da clínica.</p>
                     </div>
                     <div className="bg-primary/5 p-4 rounded-lg">
-                        <h4 className="font-bold text-secondary-foreground mb-2">Papel da Psicóloga:</h4>
-                        <p className="text-sm text-muted-foreground">Sua expertise é nosso melhor marketing. Conteúdos técnicos e humanizados atraem o público certo.</p>
+                        <h4 className="font-bold text-secondary-foreground mb-2">Sua Presença Importa</h4>
+                        <p className="text-sm text-muted-foreground">Em 2026, a participação de vocês (fotos, vídeos) ajuda a criar conexão e confiança. Não é obrigação, mas faz toda a diferença.</p>
                     </div>
                 </div>
             </CardContent>
@@ -277,28 +253,17 @@ export const ContratosSlide = () => (
             <CardHeader>
                 <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
                     <FileText className="w-8 h-8" />
-                    Contratos (Psis e Pcts)
+                    Contratos
                 </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-                <p className="text-lg">Segurança jurídica para todos os envolvidos.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="border border-border p-4 rounded-lg">
-                        <h4 className="font-bold mb-2">Para Psicólogas</h4>
-                        <ul className="text-sm space-y-1 text-muted-foreground">
-                            <li>• Termos de parceria</li>
-                            <li>• Responsabilidades</li>
-                            <li>• Fluxo de repasse</li>
-                        </ul>
-                    </div>
-                    <div className="border border-border p-4 rounded-lg">
-                        <h4 className="font-bold mb-2">Para Pacientes</h4>
-                        <ul className="text-sm space-y-1 text-muted-foreground">
-                            <li>• Termos de serviço</li>
-                            <li>• Política de cancelamento</li>
-                            <li>• Privacidade de dados</li>
-                        </ul>
-                    </div>
+                <p className="text-lg">Estamos elaborando contratos com apoio jurídico tanto para vocês quanto para os pacientes.</p>
+                <div className="bg-muted/50 p-4 rounded-lg text-center">
+                    <h4 className="font-bold mb-2 flex items-center justify-center gap-2">
+                        <CheckCircle className="w-5 h-5 text-accent" />
+                        Objetivos
+                    </h4>
+                    <p className="text-sm text-muted-foreground">Trazer mais clareza, segurança e alinhamento de expectativas para todos. Apresentaremos tudo em breve.</p>
                 </div>
             </CardContent>
         </Card>

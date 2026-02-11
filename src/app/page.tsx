@@ -1,7 +1,7 @@
 
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   ArrowLeft,
@@ -88,8 +88,30 @@ const presentation2Slides: SlideContent[] = [
 export default function Home() {
   const [selectedPresentation, setSelectedPresentation] = useState<1 | 2 | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [showControls, setShowControls] = useState(true);
 
   const slides = selectedPresentation === 1 ? presentation1Slides : presentation2Slides;
+
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+
+    const handleActivity = () => {
+      setShowControls(true);
+      clearTimeout(timeout);
+      timeout = setTimeout(() => setShowControls(false), 3000);
+    };
+
+    window.addEventListener("mousemove", handleActivity);
+    window.addEventListener("click", handleActivity);
+
+    handleActivity();
+
+    return () => {
+      window.removeEventListener("mousemove", handleActivity);
+      window.removeEventListener("click", handleActivity);
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev > 0 ? prev - 1 : slides.length - 1));
@@ -141,7 +163,7 @@ export default function Home() {
                             <Rocket className="w-8 h-8 text-accent" />
                         </div>
                         <CardTitle className="text-3xl font-headline text-primary">Segundo All Hands</CardTitle>
-                        <CardDescription className="text-lg">Alinhamento e Estratégia</CardDescription>
+                        <CardDescription className="text-lg">Amanhã, 11 de Fevereiro</CardDescription>
                     </CardHeader>
                 </Card>
             </div>
@@ -191,7 +213,12 @@ export default function Home() {
         </AnimatePresence>
       </div>
       
-      <div className="w-full max-w-3xl px-4 absolute bottom-8">
+      <motion.div
+        className="w-full max-w-3xl px-4 absolute bottom-8"
+        initial={{ opacity: 1 }}
+        animate={{ opacity: showControls ? 1 : 0 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="flex items-center justify-between">
           <Button variant="outline" size="icon" onClick={prevSlide} aria-label="Slide Anterior">
             <ArrowLeft />
@@ -205,7 +232,7 @@ export default function Home() {
             <ArrowRight />
           </Button>
         </div>
-      </div>
+      </motion.div>
     </main>
   );
 }
