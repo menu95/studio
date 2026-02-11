@@ -58,7 +58,7 @@ export const WelcomeSlide = () => (
                 </div>
                 <div className="flex items-start gap-3">
                     <FileText className="w-5 h-5 mt-1 text-accent flex-shrink-0" />
-                    <p><b>Ajustes no site:</b> Mudamos a "promessa" e a estrutura para melhor comunicação.</p>
+                    <p><b>Ajustes no site:</b> Mudamos a &quot;promessa&quot; e a estrutura para melhor comunicação.</p>
                 </div>
                 <div className="flex items-start gap-3">
                     <TrendingUp className="w-5 h-5 mt-1 text-accent flex-shrink-0" />

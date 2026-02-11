@@ -22,7 +22,8 @@ import {
   LayoutDashboard,
   FileText,
   RefreshCw,
-  Rocket
+  Rocket,
+  Star
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -51,7 +52,13 @@ import {
     MarketingSlide,
     SetoresEstrelaGuiaSlide,
     ContratosSlide,
-    ReunioesRecorrentesSlide
+    ReunioesRecorrentesSlide,
+    EstrategiaSetoresSlide,
+    LiderancaSlide,
+    EstrelaGuiaOKRsSlide,
+    NotionOrganizacaoSlide,
+    RituaisAllHandsSlide,
+    EncerramentoSlide
 } from '@/components/slides-second';
 
 type SlideContent = {
@@ -81,8 +88,12 @@ const presentation2Slides: SlideContent[] = [
     { title: "Marketing", Icon: Megaphone, content: MarketingSlide },
     { title: "Ajuste de Valor", Icon: HandCoins, content: AjusteValorSlide },
     { title: "Movimentos 2025", Icon: Activity, content: Movimentos2025Slide },
-    { title: "Setores & Notion", Icon: LayoutDashboard, content: SetoresEstrelaGuiaSlide },
-    { title: "Reuniões Recorrentes", Icon: RefreshCw, content: ReunioesRecorrentesSlide },
+    { title: "Divisão Estratégica", Icon: LayoutDashboard, content: EstrategiaSetoresSlide },
+    { title: "Liderança", Icon: Users, content: LiderancaSlide },
+    { title: "Estrela Guia & OKRs", Icon: Star, content: EstrelaGuiaOKRsSlide },
+    { title: "Notion & Organização", Icon: FileText, content: NotionOrganizacaoSlide },
+    { title: "Rituais All Hands", Icon: RefreshCw, content: RituaisAllHandsSlide },
+    { title: "Encerramento", Icon: Rocket, content: EncerramentoSlide },
 ];
 
 export default function Home() {

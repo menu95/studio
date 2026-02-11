@@ -1,0 +1,12 @@
+
+> nextn@0.1.0 dev
+> next dev -p 9002
+
+  ▲ Next.js 14.2.3
+  - Local:        http://localhost:9002
+
+ ✓ Starting...
+ ✓ Ready in 2.1s
+ ○ Compiling / ...
+ ✓ Compiled / in 15.8s (2643 modules)
+ GET / 200 in 16750ms
