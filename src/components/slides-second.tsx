@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import {
     HandCoins, CalendarDays, Target, Activity, HeartHandshake,
     Megaphone, LayoutDashboard, FileText, RefreshCw, Star,
-    Rocket, TrendingUp, Users, CheckCircle, Info, AlertCircle
+    Rocket, TrendingUp, Users, CheckCircle, Info, AlertCircle, Sparkles, Flag
 } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
@@ -126,7 +126,7 @@ export const Expectativas2026Slide = () => (
                 </div>
                 <div className="space-y-4">
                      <div className="p-4 bg-accent/5 rounded-lg border border-accent/10">
-                        <p className="text-sm font-semibold italic">"Nossa visão para 2026 é consolidar a Deep Insights como referência em agilidade e qualidade no atendimento psicológico online."</p>
+                        <p className="text-sm font-semibold italic">&quot;Nossa visão para 2026 é consolidar a Deep Insights como referência em agilidade e qualidade no atendimento psicológico online.&quot;</p>
                      </div>
                 </div>
             </CardContent>
@@ -299,5 +299,313 @@ export const ReunioesRecorrentesSlide = () => (
                 <p className="text-center font-headline text-2xl text-primary pt-8">Juntos, vamos mais longe!</p>
             </CardContent>
         </Card>
+    </div>
+);
+
+export const EstrategiaSetoresSlide = () => (
+    <div className="max-w-5xl mx-auto text-left w-full">
+        <Card className="bg-background/30 border-accent/20">
+            <CardHeader>
+                <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
+                    <LayoutDashboard className="w-8 h-8" />
+                    Divisão Estratégica das Áreas
+                </CardTitle>
+                <CardDescription>Apresentado por Gabriel</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                 <p className="text-base text-muted-foreground">
+                    &quot;Para crescermos de forma saudável, precisamos de especialização. A estratégia por trás dessa nova divisão é garantir que cada parte vital da empresa tenha um guardião focado.&quot;
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                         <div className="flex items-center gap-2 mb-2 font-bold text-primary">
+                             <TrendingUp className="w-5 h-5" />
+                             Crescimento & Finanças
+                         </div>
+                         <p className="text-sm text-muted-foreground">É o pilar que garante os recursos e a chegada de novos pacientes. Sem isso, a máquina para.</p>
+                    </div>
+                    <div className="p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                         <div className="flex items-center gap-2 mb-2 font-bold text-primary">
+                             <HeartHandshake className="w-5 h-5" />
+                             Marca & Cuidado Clínico
+                         </div>
+                         <p className="text-sm text-muted-foreground">É a casa técnica. Onde se garante a excelência do atendimento, a qualidade dos profissionais e a força da nossa marca.</p>
+                    </div>
+                    <div className="p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                         <div className="flex items-center gap-2 mb-2 font-bold text-primary">
+                             <Activity className="w-5 h-5" />
+                             Produto & Tecnologia
+                         </div>
+                         <p className="text-sm text-muted-foreground">É o pilar da infraestrutura. A missão aqui é construir as ferramentas e sistemas para que os outros dois setores funcionem sem atrito.</p>
+                    </div>
+                </div>
+                 <Alert className="bg-accent/10 border-accent/20">
+                    <Info className="h-4 w-4 text-accent" />
+                    <AlertTitle>Organização e Segurança</AlertTitle>
+                    <AlertDescription className="text-muted-foreground">
+                       Isso traz segurança para vocês. Agora, fica claro quem resolve o financeiro, quem resolve o suporte técnico e quem dá o suporte clínico.
+                    </AlertDescription>
+                </Alert>
+            </CardContent>
+        </Card>
+    </div>
+);
+
+export const LiderancaSlide = () => (
+    <div className="max-w-6xl mx-auto text-left w-full overflow-y-auto max-h-[70vh] pr-2">
+        <Card className="bg-background/30 border-primary/20">
+            <CardHeader>
+                <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
+                    <Users className="w-8 h-8" />
+                    Liderança por Setor
+                </CardTitle>
+                <CardDescription>Quem procurar e quando?</CardDescription>
+            </CardHeader>
+            <CardContent className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                {/* Kamila */}
+                <div className="flex flex-col gap-4 p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                    <div className="flex items-center gap-3">
+                         <div className="bg-primary/10 p-2 rounded-full">
+                            <Sparkles className="w-6 h-6 text-primary" />
+                         </div>
+                         <div>
+                             <h4 className="font-bold text-sm leading-tight">Kamila Carvalho</h4>
+                             <p className="text-xs text-muted-foreground">CEO (Chief Executive Officer)</p>
+                         </div>
+                    </div>
+                    <div className="space-y-2 flex-grow">
+                        <p className="text-xs font-semibold text-accent">Foco: Visão, Marca, Experiência do Paciente e da Equipe</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                            Guardiã da identidade e estratégia da marca. Cuida da Jornada do Paciente e da Equipe, liderando a felicidade do cliente e gestão dos profissionais.
+                        </p>
+                    </div>
+                    <div className="mt-auto pt-3 border-t border-primary/5">
+                        <p className="text-[10px] font-bold text-primary mb-1">QUANDO PROCURAR:</p>
+                        <p className="text-[10px] text-muted-foreground">
+                            Sugestões sobre propósito, tom de voz da marca, ideias para experiência de acolhimento ou dúvidas sobre a comunidade Deep.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Gabriel */}
+                <div className="flex flex-col gap-4 p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                     <div className="flex items-center gap-3">
+                         <div className="bg-primary/10 p-2 rounded-full">
+                            <Activity className="w-6 h-6 text-primary" />
+                         </div>
+                         <div>
+                             <h4 className="font-bold text-sm leading-tight">Gabriel Barbosa</h4>
+                             <p className="text-xs text-muted-foreground">CTO & Líder de Operações</p>
+                         </div>
+                    </div>
+                    <div className="space-y-2 flex-grow">
+                        <p className="text-xs font-semibold text-accent">Foco: Tecnologia, Produto e Operações</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                            Lidera a estrutura que faz a clínica funcionar. Responsável pela plataforma, segurança de dados, engenharia de software e toda a operação da empresa.
+                        </p>
+                    </div>
+                     <div className="mt-auto pt-3 border-t border-primary/5">
+                        <p className="text-[10px] font-bold text-primary mb-1">QUANDO PROCURAR:</p>
+                        <p className="text-[10px] text-muted-foreground">
+                            Problemas na plataforma, dúvidas sobre processos, construção de produtos, melhoria de fluxos ou segurança de dados.
+                        </p>
+                    </div>
+                </div>
+
+                {/* Gustavo */}
+                <div className="flex flex-col gap-4 p-4 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all">
+                     <div className="flex items-center gap-3">
+                         <div className="bg-primary/10 p-2 rounded-full">
+                            <TrendingUp className="w-6 h-6 text-primary" />
+                         </div>
+                         <div>
+                             <h4 className="font-bold text-sm leading-tight">Gustavo Mannarino</h4>
+                             <p className="text-xs text-muted-foreground">CFO (Chief Financial Officer)</p>
+                         </div>
+                    </div>
+                     <div className="space-y-2 flex-grow">
+                        <p className="text-xs font-semibold text-accent">Foco: Sustentabilidade e Finanças</p>
+                        <p className="text-xs text-muted-foreground leading-relaxed">
+                            Responsável pela saúde do negócio, planejamento econômico, precificação e conformidade. Lidera captação financeira e parcerias estratégicas.
+                        </p>
+                    </div>
+                     <div className="mt-auto pt-3 border-t border-primary/5">
+                        <p className="text-[10px] font-bold text-primary mb-1">QUANDO PROCURAR:</p>
+                        <p className="text-[10px] text-muted-foreground">
+                             Repasses, dúvidas contratuais, questões fiscais, parcerias, palestras ou entendimento de modelos de pacotes e precificação.
+                        </p>
+                    </div>
+                </div>
+
+            </CardContent>
+        </Card>
+    </div>
+);
+
+export const EstrelaGuiaOKRsSlide = () => (
+    <div className="max-w-5xl mx-auto text-left w-full">
+        <Card className="bg-background/30 border-accent/20">
+             <CardHeader>
+                <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
+                    <Star className="w-8 h-8" />
+                    O Caminho e as Metas
+                </CardTitle>
+                <CardDescription>Apresentado por Gabriel</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-8">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                    <div className="md:w-1/2 space-y-4">
+                         <h4 className="font-bold text-xl flex items-center gap-2">
+                             <Target className="w-6 h-6 text-accent" />
+                             OKRs (Objetivos e Resultados Chave)
+                         </h4>
+                         <p className="text-muted-foreground text-sm">
+                             Temos a Estrela Guia (o sonho grande lá no alto) e os KRs (os degraus concretos que vamos subir agora).
+                         </p>
+                         <div className="p-4 bg-primary/5 rounded-lg border border-primary/10">
+                            <h5 className="font-bold text-primary mb-2">Estrela Guia 2026</h5>
+                            <ul className="space-y-2 text-sm">
+                                <li className="flex items-center gap-2">
+                                    <Sparkles className="w-4 h-4 text-accent" />
+                                    Atingir 2k de vidas impactadas.
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <Sparkles className="w-4 h-4 text-accent" />
+                                    200k vidas alcançadas.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="md:w-1/2 space-y-4">
+                        <h4 className="font-bold text-xl flex items-center gap-2">
+                             <Flag className="w-6 h-6 text-accent" />
+                             KRs para o Primeiro Trimestre
+                         </h4>
+                         <div className="space-y-2">
+                             <div className="flex items-start gap-3 p-2 bg-background/50 rounded border border-muted">
+                                 <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">1</span>
+                                 <span className="text-sm">Implementar sistema organizacional em toda deep.</span>
+                             </div>
+                             <div className="flex items-start gap-3 p-2 bg-background/50 rounded border border-muted">
+                                 <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">2</span>
+                                 <span className="text-sm">Alcançar 500 seguidores no instagram.</span>
+                             </div>
+                             <div className="flex items-start gap-3 p-2 bg-background/50 rounded border border-muted">
+                                 <span className="bg-accent/20 text-accent text-xs font-bold px-2 py-1 rounded">3</span>
+                                 <span className="text-sm">Lançar nossos primeiros Infoprodutos.</span>
+                             </div>
+                         </div>
+                    </div>
+                </div>
+            </CardContent>
+        </Card>
+    </div>
+);
+
+export const NotionOrganizacaoSlide = () => (
+    <div className="max-w-4xl mx-auto text-left w-full">
+        <Card className="bg-background/30 border-primary/20">
+            <CardHeader>
+                <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
+                    <FileText className="w-8 h-8" />
+                     A Anatomia da Empresa
+                </CardTitle>
+                 <CardDescription>Apresentado por Gabriel</CardDescription>
+            </CardHeader>
+            <CardContent className="space-y-6">
+                <div className="space-y-4">
+                    <p className="text-lg">
+                        Para organizar tudo isso, centralizamos nossa inteligência no Notion. A DeepSaúde é uma máquina complexa trabalhando para dar suporte a vocês.
+                    </p>
+                    <div className="p-4 bg-muted/30 rounded-lg">
+                        <p className="text-sm text-muted-foreground italic">
+                            &quot;Além do Clínico, nós temos setores ativos de Produto, Marketing, Financeiro... Tem gente codando software, tem gente analisando dados, tem gente criando estratégias.&quot;
+                        </p>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
+                    <div className="space-y-2">
+                        <h4 className="font-bold flex items-center gap-2 text-primary">
+                             <Users className="w-5 h-5" />
+                             Onde vocês entram?
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                            Vocês fazem parte do Corpo Clínico, que fica dentro da área de Cuidado Clínico.
+                        </p>
+                    </div>
+                     <div className="space-y-2">
+                        <h4 className="font-bold flex items-center gap-2 text-primary">
+                             <LayoutDashboard className="w-5 h-5" />
+                             A Visão do Todo
+                        </h4>
+                        <p className="text-sm text-muted-foreground">
+                            É importante navegarem pelo Notion para entenderem que não estão sozinhas. Existe toda uma estrutura de bastidores trabalhando dia e noite.
+                        </p>
+                    </div>
+                </div>
+            </CardContent>
+        </Card>
+    </div>
+);
+
+export const RituaisAllHandsSlide = () => (
+    <div className="max-w-4xl mx-auto text-left w-full">
+        <Card className="bg-primary/5 border-primary/20">
+            <CardHeader>
+                <CardTitle className="font-headline text-primary flex items-center gap-2 text-3xl">
+                    <RefreshCw className="w-8 h-8" />
+                    Rituais: Transparência Radical
+                </CardTitle>
+                <CardDescription>Apresentado por Gabriel</CardDescription>
+            </CardHeader>
+             <CardContent className="space-y-6">
+                 <div className="text-center space-y-4">
+                     <p className="text-lg">
+                        &quot;Não queremos reuniões inúteis, mas a comunicação precisa fluir.&quot;
+                     </p>
+                     <div className="flex justify-center">
+                         <div className="bg-background p-6 rounded-full w-40 h-40 flex flex-col items-center justify-center border-4 border-accent shadow-lg">
+                             <Users className="w-10 h-10 text-primary mb-2" />
+                             <span className="font-bold text-lg">All Hands</span>
+                             <span className="text-xs text-muted-foreground">Todos Juntos</span>
+                         </div>
+                     </div>
+                 </div>
+                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div className="p-4 bg-background/60 rounded-lg">
+                         <h4 className="font-bold mb-1">Ritual Recorrente</h4>
+                         <p className="text-sm text-muted-foreground">Abertura de números, acompanhamento de metas e ajuste de rota.</p>
+                     </div>
+                      <div className="p-4 bg-background/60 rounded-lg">
+                         <h4 className="font-bold mb-1">Cultura da Transparência</h4>
+                         <p className="text-sm text-muted-foreground">Vocês vão saber se a empresa está saudável e quais são os próximos passos. Na Deep, ninguém trabalha no escuro.</p>
+                     </div>
+                 </div>
+            </CardContent>
+        </Card>
+    </div>
+);
+
+export const EncerramentoSlide = () => (
+    <div className="text-center max-w-4xl mx-auto">
+      <div className="flex justify-center mb-8">
+         <div className="bg-accent/10 p-6 rounded-full">
+            <Rocket className="w-24 h-24 text-accent" />
+         </div>
+      </div>
+      <h1 className="text-5xl font-headline text-primary mb-6">
+        O Futuro
+      </h1>
+      <p className="text-2xl font-headline text-secondary-foreground mb-8">
+        Liberdade e Estratégia
+      </p>
+      <div className="p-8 bg-background/40 backdrop-blur rounded-xl border border-primary/20 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground italic leading-relaxed">
+            &quot;Essa estrutura toda — setores, OKRs, Notion — foi feita para nos dar liberdade. Conseguir criar um ambiente mais estratégico e organizado para avançarmos.&quot;
+          </p>
+      </div>
+       <p className="mt-12 text-sm text-muted-foreground">Obrigado a todos!</p>
     </div>
 );
