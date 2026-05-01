@@ -60,6 +60,11 @@ module.exports = {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+        gold: {
+          DEFAULT: "#D4AF37",
+          light: "#F9E29C",
+          dark: "#B8860B",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
